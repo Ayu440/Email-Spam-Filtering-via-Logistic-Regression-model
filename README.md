@@ -1,4 +1,4 @@
-# 📧 Email Spam Filtering using Logistic Regression
+# Email Spam Filtering using Logistic Regression
 
 A machine learning project that classifies emails as **Spam** or **Not Spam** using **TF-IDF text vectorization** and a **Logistic Regression** classifier. The model was trained in Google Colab and reaches about **98.8% accuracy** on a held-out test set.
 
@@ -6,11 +6,11 @@ The project is built around core, beginner-friendly data science concepts: datas
 
 ---
 
-## 📌 Overview
+## Overview
 
 Spam emails waste time and can carry phishing or scam content. This project trains a simple, fast, and interpretable text classifier that reads the raw text of an email and predicts whether it is spam, along with a confidence score.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 ├── app.py                  # Application that loads the saved model and predicts on emails
@@ -21,7 +21,7 @@ Spam emails waste time and can carry phishing or scam content. This project trai
 
 > The training notebook (Google Colab) and `emails.csv` dataset can also be added to the repo for full reproducibility.
 
-## 📊 Dataset
+## Dataset
 
 | Property | Value |
 |---|---|
@@ -33,7 +33,7 @@ Spam emails waste time and can carry phishing or scam content. This project trai
 
 The dataset is moderately imbalanced, so a **stratified split** is used to keep the spam ratio the same in training and test sets.
 
-## 🔄 Workflow
+## Workflow
 
 1. **Dataset input**: load `emails.csv` with Pandas.
 2. **Imputation**: missing text values are filled with an empty string; rows with a missing target label are dropped.
@@ -45,7 +45,7 @@ The dataset is moderately imbalanced, so a **stratified split** is used to keep 
 8. **Evaluation**: accuracy, classification report, and confusion matrix.
 9. **Model saving**: model and vectorizer exported with `joblib`.
 
-## 📈 Results
+## Results
 
 **Accuracy: 98.85%**
 
@@ -63,7 +63,7 @@ The dataset is moderately imbalanced, so a **stratified split** is used to keep 
 
 The model is very conservative: only 1 legitimate email was wrongly flagged as spam, while 12 spam emails slipped through.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python
 - Pandas, NumPy
@@ -73,7 +73,7 @@ The model is very conservative: only 1 legitimate email was wrongly flagged as s
 - Joblib (model persistence)
 - Google Colab
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -111,7 +111,7 @@ confidence = model.predict_proba(vec)[0][prediction]
 print("SPAM" if prediction == 1 else "NOT SPAM", f"({confidence:.2%})")
 ```
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Try other models (Naive Bayes, SVM, Random Forest) and compare.
 - Use n-grams or word embeddings for richer features.
@@ -119,10 +119,10 @@ print("SPAM" if prediction == 1 else "NOT SPAM", f"({confidence:.2%})")
 - Add hyperparameter tuning with cross-validation.
 - Deploy as a web app (Streamlit / Flask).
 
-## 👤 Author
+## Author
 
 **Ayu440** — [GitHub](https://github.com/Ayu440)
 
-## 📄 License
+## License
 
 This project is open source and available for educational use.
